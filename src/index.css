@@ -1,13 +1,131 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: aliceblue;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-comments-form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.add-comments-form .comments-button {
+    margin-top: 5px;
+}
+
+.comments-button {
+    cursor: pointer;
+    border: none;
+    background-color: rgb(101, 101, 247);
+    color: aliceblue;
+    height: 2em;
+}
+
+.comments-button:hover {
+    color: rgb(3, 3, 41);
+}
+
+.action-icon {
+    height: 15px;
+}
+
+.action-icon:hover {
+    opacity: .6;
+}
+
+.comments-list {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(201, 228, 252);
+    margin: 5px;
+    padding: 5px;
+    border-bottom: rgb(101, 101, 247) solid 1px;
+    border-top: rgb(101, 101, 247) solid 1px;
+}
+
+.comment-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment-date {
+    width: 90%;
+    opacity: .8;
+}
+
+.comment-text {
+    width: 90%;
+}
+
+.comment-response-button {
+    width: 76px;
+}
+
+.subcomments-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.subcomment {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: rgb(3, 3, 41) solid 1px;
+    border-top: rgb(3, 3, 41) solid 1px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.subcomment .comment-date {
+    width: 89%;
+}
+
+.subcomments-list.loaded-subcomments {
+    width: 100%;
+}
+
+.hidden-subcomments {
+    display: none;
+}
+
+.add-subcomments-form {
+    margin: 5px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.comments-textarea {
+    border-color: rgb(101, 101, 247);
+}
+
+.comments-textarea:focus-visible {
+    outline: rgb(101, 101, 247) auto 1px;
+}
+
+@media(max-device-width: 1000px) {
+    .add-comments-form {
+        width: 100%;
+    }
+
+    .comments-list {
+        width: 100%;
+    }
 }
